@@ -3,22 +3,19 @@ package org.example;
 import org.example.models.Cliente;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
         Cliente cliente = new Cliente();
 
-        Cliente clienteDos=new Cliente(-20,"Bruno Diaz",
-                "themasterwayne@hotmail.com", LocalDate.now(),
-                "3225962363");
+        //intentar agregar un nombre al CLiente desde la consola
+        Scanner lea = new Scanner(System.in);
 
-        //llenando con el set la propiedad id del objeto anemico
-        cliente.setId(-56);
+        System.out.print("Digita el nombre del cliente: ");
+        cliente.setNombres(lea.nextLine());
 
-        //mostrando el id del cliente:
-        //mostrando el correo del cliente:
-        System.out.println("El cliente 1 tiene el id: "+cliente.getId());
 
 
     }

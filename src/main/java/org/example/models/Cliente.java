@@ -1,8 +1,12 @@
 package org.example.models;
 
+import org.example.helpers.validaciones.ClienteValidacion;
+
 import java.time.LocalDate;
 
 public class Cliente {
+
+
 
     //ID
     private Integer id;
@@ -14,6 +18,9 @@ public class Cliente {
     private LocalDate fechaRegistro;
     //TELEFONO (DEBE TENER 10 DIGITOS)
     private String telefono;
+
+    //inyectando una dependencia de la clase clientevalidacion
+    private ClienteValidacion clienteValidacion=new ClienteValidacion();
 
     public Cliente() {
     }
@@ -43,7 +50,12 @@ public class Cliente {
     }
 
     public void setNombres(String nombres) {
-        this.nombres = nombres;
+        try{
+            this.clienteValidacion.validarNombres(nombres);
+            this.nombres=nombres;
+        }catch(Exception error){
+            System.out.println(error.getMessage());
+        }
     }
 
     public String getCorreo() {
@@ -51,8 +63,15 @@ public class Cliente {
     }
 
     public void setCorreo(String correo) {
-        this.correo = correo;
+      try {
+          this.clienteValidacion.validarCorreo(correo);
+          this.correo= correo;
+      }
+      catch (Exception error){
+          System.out.println(error.getMessage());
+      }
     }
+
 
     public LocalDate getFechaRegistro() {
         return fechaRegistro;

@@ -6,8 +6,6 @@ import java.time.LocalDate;
 
 public class Cliente {
 
-
-
     //ID
     private Integer id;
     //NOMBRE Y APELLIDO (QUE SOLO SE PUEDAN LETRAS Y ESPACIOS Y MAXIMO 70 CARACTERES)

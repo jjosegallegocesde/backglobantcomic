@@ -10,4 +10,9 @@ public class Producto {
     //RESEÑA limite de 100 caracteres
     //MARCA
 
+
+    //REVISTAS (VALORACION (a/b/c)) (año publicacion)
+    //OTROS (pais de origen) (fabricante)
+
+
 }

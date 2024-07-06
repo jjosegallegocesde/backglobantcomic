@@ -1,22 +1,12 @@
 package org.example;
 
-import org.example.models.Cliente;
-
-import java.time.LocalDate;
-import java.util.Scanner;
+import org.example.models.PruebaFecha;
 
 public class Main {
     public static void main(String[] args) {
 
-        Cliente cliente = new Cliente();
-
-        //intentar agregar un nombre al CLiente desde la consola
-        Scanner lea = new Scanner(System.in);
-
-        System.out.print("Digita el nombre del cliente: ");
-        cliente.setNombres(lea.nextLine());
-
-
+        PruebaFecha pruebaFecha= new PruebaFecha();
+        pruebaFecha.probandoFechas();
 
     }
 }
